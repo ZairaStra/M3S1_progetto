@@ -13,7 +13,10 @@ const App = function () {
     <>
       <MyNav />
       <Headings />
-      <Gallery title="Harry Potter" /*  query="Harry Potter"  */ />
+      <Gallery title="Harry Potter" query="Harry Potter" />
+      <Gallery title="Il Signore degli Anelli" query="Lord of The Ring" />
+      <Gallery title="Star Wars" query="Star Wars" />
+      <Gallery title="The Hunger Games" query="Hunger Games" />
       <MyFooter />
     </>
   );

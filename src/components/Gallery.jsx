@@ -11,9 +11,10 @@ class Gallery extends Component {
 
   fetchMovies = async () => {
     try {
+      // const response = await fetch(`http://www.omdbapi.com/?apikey=85b2561c&s=Harry%20Potter`);
       //come faccio a rendere gallery riutilizzabile se devo passare tutto il titolo per trovare l'array???
-      //const response = await fetch(`https://www.omdbapi.com/?apikey=85b2561c&s=${encodeURIComponent(this.props.query)}`);
-      const response = await fetch(`http://www.omdbapi.com/?apikey=85b2561c&s=Harry%20Potter`);
+      const response = await fetch(`https://www.omdbapi.com/?apikey=85b2561c&s=${this.props.query}`);
+
       if (response.ok) {
         const data = await response.json();
         this.setState({ movies: data.Search });
