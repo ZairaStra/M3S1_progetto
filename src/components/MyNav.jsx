@@ -58,7 +58,11 @@ class MyNav extends Component {
                 <Row>
                   <Col xs={9} sm={4} lg={3}>
                     <img src={avatar} alt="avatar" className="rounded d-block" width={100} />
-                    <Button className="btn d-block flexBtn" id="accountBtn" onClick={() => this.setState({ showSettings: !this.state.showSettings })}>
+                    <Button
+                      className="btn d-block border border-secondary my-3"
+                      id="settingBtn"
+                      onClick={() => this.setState({ showSettings: !this.state.showSettings })}
+                    >
                       <i class="bi bi-gear-wide-connected"></i>
                     </Button>
                   </Col>
@@ -105,7 +109,7 @@ class MyNav extends Component {
                 </Row>
 
                 <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 py-5">
-                  <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">SAVE</Button>
+                  <Button className="btn btn-dark btn-lg rounded-0  text-secondary px-4 flexBtn">SAVE</Button>
                   <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">CANCEL</Button>
                   <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">DELETE PROFILE</Button>
                 </div>

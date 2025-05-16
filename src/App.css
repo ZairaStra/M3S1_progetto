@@ -30,6 +30,10 @@ footer {
   height: 55px;
 }
 
+#settingBtn {
+  background-color: transparent !important;
+}
+
 #accountBtn {
   background-color: transparent !important;
   border: none !important;
