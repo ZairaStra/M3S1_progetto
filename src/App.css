@@ -54,8 +54,15 @@ footer {
 }
 
 .footer-button {
-  color: #838383;
-  border-color: #838383;
+  background-color: transparent !important;
+  color: #838383 !important;
+  border-color: #838383 !important;
+}
+
+.footer-button:hover {
+  border-color: #221f1f !important;
+  cursor: pointer;
+  color: white !important;
 }
 
 .copyright {

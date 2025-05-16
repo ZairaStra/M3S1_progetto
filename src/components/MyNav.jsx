@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const MyNav = function () {
   return (
-    <Navbar expand="lg" bg="dark" variant="dark" data-bs-theme="dark" sticky="top">
+    <Navbar expand="lg" className="navbar" variant="none" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={logo} alt="Logo" style={{ width: "100px", height: "55px" }} />
