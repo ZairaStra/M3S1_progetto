@@ -30,6 +30,24 @@ footer {
   height: 55px;
 }
 
+#accountBtn {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.languageBtn:hover {
+  color: black !important;
+  background-color: white !important;
+  border-color: black !important;
+}
+
+.flexBtn:hover {
+  border-color: #221f1f !important;
+  cursor: pointer;
+  background-color: white !important;
+  color: black;
+}
+
 #kids {
   color: #f5f5f1;
   font-size: 0.8em;
