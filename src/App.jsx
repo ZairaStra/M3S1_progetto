@@ -17,6 +17,8 @@ const App = function () {
       <Gallery title="Il Signore degli Anelli" query="Lord of The Ring" />
       <Gallery title="Star Wars" query="Star Wars" />
       <Gallery title="The Hunger Games" query="Hunger Games" />
+      <Gallery title="Poirot" query="Poirot" />
+      <Gallery title="sdupba" query="dauepi" />
       <MyFooter />
     </>
   );
