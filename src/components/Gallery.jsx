@@ -35,6 +35,10 @@ class Gallery extends Component {
     this.fetchMovies();
   }
 
+  closeAlert = () => {
+    this.setState({ showAlert: false });
+  };
+
   render() {
     return (
       <Container fluid className="mb-3">
@@ -44,7 +48,11 @@ class Gallery extends Component {
             <span className="visually-hidden">Loading</span>
           </Spinner>
         )}
-        {this.state.hasError && <Alert variant="danger">Error: {this.state.errorMessage}</Alert>}
+        {this.state.hasError && (
+          <Alert variant="danger" onClose={this.closeAlert} dismissible>
+            Error: {this.state.errorMessage}
+          </Alert>
+        )}
 
         <Row xs={1} sm={2} lg={4} xl={6} className="g-4">
           {this.state.movies

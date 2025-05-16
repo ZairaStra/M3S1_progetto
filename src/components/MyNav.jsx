@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar, Dropdown, Row, Col } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, Dropdown, Row, Col, ListGroup } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import avatar from "../assets/avatar.png";
 import { Component } from "react";
@@ -6,13 +6,8 @@ import { Component } from "react";
 class MyNav extends Component {
   state = {
     showAccount: false,
+    showSettings: false,
   };
-
-  /*  clickShowAccount = () => {
-    this.setState((prevState) => ({
-      showAccount: !prevState.showAccount,
-    }));
-  }; */
 
   render() {
     return (
@@ -42,6 +37,9 @@ class MyNav extends Component {
                 </Nav.Link>
               </Nav>
               <div className="d-flex align-items-center gap-3">
+                <Button className="btn" id="accountBtn" onClick={() => this.setState({ showSettings: !this.state.showSettings })}>
+                  <i class="bi bi-gear-wide-connected"></i>
+                </Button>
                 <i className="bi bi-search icons text-white"></i>
                 <div id="kids" className="fw-bold text-white">
                   KIDS
@@ -54,6 +52,101 @@ class MyNav extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        {this.state.showSettings && (
+          <Container>
+            <Row className="g-2 g-md-3 g-xl-4">
+              <Col xs={12} md={8} className="justify-content-center">
+                <h1 className="display-3 text-white">Settings</h1>
+                <hr />
+
+                <h3 className="bg-secondary px-3 py-1 text-white">Strive Student</h3>
+                <div className="d-flex justify-content-between">
+                  <div>
+                    <h3 className="text-secondary mt-5">Country</h3>
+                    <Dropdown className="border-bottom border-secondary mb-4 pb-3 text-white">
+                      <Dropdown.Toggle
+                        className="btn text-white bg-black btn-outline-light rounded-0 px-4 py-1 languageBtn"
+                        type="button"
+                        aria-expanded="false"
+                      >
+                        Ireland
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="#">UK</Dropdown.Item>
+                        <Dropdown.Item href="#" active>
+                          Ireland
+                        </Dropdown.Item>
+                        <Dropdown.Item href="#">Spain</Dropdown.Item>
+                        <Dropdown.Item href="#">France</Dropdown.Item>
+                        <Dropdown.Item href="#">Italia</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+                  <div>
+                    <h3 className="text-secondary mt-5">Audio</h3>
+                    <Dropdown className="border-bottom border-secondary mb-4 pb-3 text-white">
+                      <Dropdown.Toggle
+                        className="btn text-white bg-black btn-outline-light rounded-0 px-4 py-1 languageBtn"
+                        type="button"
+                        aria-expanded="false"
+                      >
+                        Default
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item href="#" active>
+                          Deafult
+                        </Dropdown.Item>
+                        <Dropdown.Item href="#">Sport</Dropdown.Item>
+                        <Dropdown.Item href="#">Cinema</Dropdown.Item>
+                        <Dropdown.Item href="#">Music</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+                  <div>
+                    <h3 className="text-secondary mt-5">Devices</h3>
+                    <ListGroup variant="flush">
+                      <ListGroup.Item>
+                        Zaira's IPhone{" "}
+                        <span>
+                          <i class="bi bi-x"></i>
+                        </span>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        Laptop 65th02l{" "}
+                        <span>
+                          <i class="bi bi-x"></i>
+                        </span>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        LG Smart Tv 7935{" "}
+                        <span>
+                          <i class="bi bi-x"></i>
+                        </span>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        Angelo's Iphone{" "}
+                        <span>
+                          <i class="bi bi-x"></i>
+                        </span>
+                      </ListGroup.Item>
+                      <ListGroup.Item>
+                        Mariapia's Google Pixel 7{" "}
+                        <span>
+                          <i class="bi bi-x"></i>
+                        </span>
+                      </ListGroup.Item>
+                    </ListGroup>
+                  </div>
+                </div>
+                <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 py-5">
+                  <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">SAVE</Button>
+                  <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">CANCEL</Button>
+                  <Button className="btn btn-dark btn-lg rounded-0 border border-secondary text-secondary px-4 flexBtn">DELETE PROFILE</Button>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        )}
         {this.state.showAccount && (
           <Container>
             <Row className="g-2 g-md-3 g-xl-4">
