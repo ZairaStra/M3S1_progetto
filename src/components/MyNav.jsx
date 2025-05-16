@@ -76,12 +76,14 @@ class MyNav extends Component {
                         >
                           English
                         </Dropdown.Toggle>
-                        <Dropdown.Item href="#" active>
-                          English
-                        </Dropdown.Item>
-                        <Dropdown.Item href="#">Spanish</Dropdown.Item>
-                        <Dropdown.Item href="#">French</Dropdown.Item>
-                        <Dropdown.Item href="#">Italian</Dropdown.Item>
+                        <Dropdown.Menu>
+                          <Dropdown.Item href="#" active>
+                            English
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#">Spanish</Dropdown.Item>
+                          <Dropdown.Item href="#">French</Dropdown.Item>
+                          <Dropdown.Item href="#">Italian</Dropdown.Item>
+                        </Dropdown.Menu>
                       </Dropdown>
                     </div>
                     <div className="border-bottom border-secondary">
