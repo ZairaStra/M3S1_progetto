@@ -35,16 +35,17 @@ class Gallery extends Component {
       <Container fluid className="mb-3">
         <h4>{this.props.title}</h4>
         {this.state.hasError && <Alert variant="danger">Error: {this.state.errorMessage}</Alert>}
+
         <Row xs={1} sm={2} lg={4} xl={6} className="g-4">
           {this.state.movies
             .filter((movie) => movie.Title.toLowerCase().includes(this.state.searchQuery.toLowerCase()))
             .map((movie) => (
-              <Col key={movie.imdbID} className="mb-2 px-1 text-center">
+              <Col key={movie.imdbID} className=" text-center">
                 <Card>
-                  <Card.Img variant="top" src={movie.Poster} />
+                  <Card.Img variant="top" src={movie.Poster} className="card-img img-fluid" />
                 </Card>
               </Col>
-            ))}
+            ))}{" "}
         </Row>
       </Container>
     );
